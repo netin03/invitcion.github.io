@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Invitación al Cine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://mx.web.img3.acsta.net/pictures/24/03/07/18/47/5975531.jpg'); /* URL de la imagen de alta resolución */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #FFD700;
+        }
+        p {
+            color: #FFFACD;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+        #yes {
+            background-color: #4CAF50;
+        }
+        #no {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="invitation">
+        <h1>¡Invitación al Cine!</h1>
+        <h2>¿Te gustaría ir al cine a ver "Intensamente 2"?</h2>
+        <div class="buttons">
+            <button id="yes" onclick="acceptInvitation()">Sí</button>
+            <button id="no" onclick="denyInvitation()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptInvitation() {
+            document.getElementById('invitation').innerHTML = '<h1>¡Gracias por aceptar la invitación!</h1><p>Te quiero mucho</p>';
+        }
+
+        function denyInvitation() {
+            alert('Lo siento, esa opción no está disponible.');
+        }
+    </script>
+</body>
+</html>
